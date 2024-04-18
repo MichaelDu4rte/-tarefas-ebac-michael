@@ -5,7 +5,7 @@ public class FIFOQueue {
     private int front;
     private int rear;
     
-    // Construtor
+    // Constructor
     public FIFOQueue(int capacity) {
         this.capacity = capacity;
         this.queue = new int[capacity];
@@ -19,7 +19,7 @@ public class FIFOQueue {
         return size == 0;
     }
     
-    // verificar se a fila está cheia
+    //  verificar se a fila está cheia
     public boolean isFull() {
         return size == capacity;
     }
@@ -35,7 +35,7 @@ public class FIFOQueue {
         size++;
     }
     
-    // Método para remover um elemento da fila
+    // remover um elemento da fila
     public int dequeue() {
         if (isEmpty()) {
             System.out.println("A fila está vazia. Não é possível remover elementos.");
@@ -45,5 +45,28 @@ public class FIFOQueue {
         front = (front + 1) % capacity;
         size--;
         return removedElement;
+    }
+    
+    // obter o elemento no fim da fila
+    public int rear() {
+        if (isEmpty()) {
+            System.out.println("A fila está vazia. Não há elementos no fim da fila.");
+            return -1; 
+        }
+        return queue[rear];
+    }
+    
+    // obter o elemento na frente da fila
+    public int front() {
+        if (isEmpty()) {
+            System.out.println("A fila está vazia. Não há elementos na frente da fila.");
+            return -1; 
+        }
+        return queue[front];
+    }
+    
+    //  obter o tamanho da fila
+    public int size() {
+        return size;
     }
 }
