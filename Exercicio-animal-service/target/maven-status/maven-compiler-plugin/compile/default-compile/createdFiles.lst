@@ -1,0 +1,4 @@
+br\com\michael\animalservice\controllers\AnimalController.class
+br\com\michael\animalservice\AnimalServiceApplication.class
+br\com\michael\animalservice\entity\Animal.class
+br\com\michael\animalservice\repository\AnimalRepository.class
